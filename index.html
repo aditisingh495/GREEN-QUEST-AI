@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenQuest | Less Scrolling. More Sky.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#home">🌿 GreenQuest</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#quest">Quests</a>
+      <a href="#journal">Journal</a>
+      <a href="#about">About</a>
+    </nav>
+    <button class="points">🌱 Points: <span id="points">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">🌿 LESS SCROLLING. MORE SKY.</p>
+        <h1>GreenQuest</h1>
+        <h2>Your personal outdoor adventure planner.</h2>
+        <p>Tell us your time, energy, and interests. Discover small adventures and reconnect with the world around you.</p>
+        <a href="#quest" class="button">Start Your Quest →</a>
+      </div>
+
+      <div class="form-card" id="quest">
+        <h2>🌱 Plan your adventure</h2>
+        <p>Let's find your next little adventure.</p>
+
+        <form id="quest-form">
+          <label for="time">Available time</label>
+          <select id="time">
+            <option value="5">5 minutes</option>
+            <option value="15">15 minutes</option>
+            <option value="30" selected>30 minutes</option>
+            <option value="60">1 hour</option>
+          </select>
+
+          <label for="energy">Energy level</label>
+          <select id="energy">
+            <option value="low">Low — keep it gentle</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High — ready to move</option>
+          </select>
+
+          <label for="interest">Your interest</label>
+          <select id="interest">
+            <option value="Nature">Nature</option>
+            <option value="Photography">Photography</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Learning">Learning</option>
+          </select>
+
+          <label for="place">Where will you go?</label>
+          <select id="place">
+            <option>Park / Green Space</option>
+            <option>Campus</option>
+            <option>Neighborhood</option>
+            <option>Balcony / Courtyard</option>
+          </select>
+
+          <button class="button full-width" type="submit">
+            ✨ Generate My Quest
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <article class="card" id="quest-result">
+        <h2>🍃 Your Quest</h2>
+        <div class="quest-icon" id="quest-icon">🌳</div>
+        <h3 id="quest-title">Find Five Different Leaves</h3>
+        <p class="tag" id="quest-meta">30 minutes · Nature</p>
+        <p id="quest-description">
+          Explore a green space and notice the shapes, colors,
+          and textures of leaves around you.
+        </p>
+        <h4>Tips for success</h4>
+        <ul id="quest-tips">
+          <li>Look for different leaf shapes.</li>
+          <li>Notice colors and patterns.</li>
+          <li>Leave plants where they grow.</li>
+        </ul>
+        <button class="button full-width" id="complete-quest">
+          ✓ Complete Quest (+10 points)
+        </button>
+        <button class="button secondary full-width" id="save-quest">
+          ♡ Save Quest
+        </button>
+      </article>
+
+      <article class="card">
+        <h2>🗺️ Quest Explorer</h2>
+        <p>Choose a familiar, safe outdoor place.</p>
+        <div class="map">
+          <div class="map-park">
+            <span>🌳</span>
+            <span>🌲</span>
+            <span>🌿</span>
+            <span>🌳</span>
+            <span>🌼</span>
+            <span>🌲</span>
+          </div>
+          <div class="map-path"></div>
+          <div class="map-pin">📍</div>
+          <span class="map-label">Green space</span>
+        </div>
+        <p class="map-note">
+          Illustration only — no live location tracking.
+        </p>
+        <button class="button full-width" id="open-map">
+          Open Maps ↗
+        </button>
+      </article>
+
+      <article class="card" id="journal">
+        <h2>📖 My Nature Journal</h2>
+        <p>Save your outdoor memories.</p>
+        <form id="journal-form">
+          <label for="entry-title">Entry title</label>
+          <input id="entry-title" maxlength="70"
+                 placeholder="e.g. A beautiful sunset" required>
+          <label for="entry-note">What did you notice?</label>
+          <textarea id="entry-note" maxlength="300"
+                    placeholder="Write about your outdoor experience..."
+                    required></textarea>
+          <button class="button full-width" type="submit">
+            + Add Journal Entry
+          </button>
+        </form>
+        <div id="journal-list"></div>
+      </article>
+    </section>
+
+    <section class="about" id="about">
+      <h2>Small steps. Big adventures.</h2>
+      <div class="about-grid">
+        <div>🌱 <h3>Explore</h3><p>Discover something new.</p></div>
+        <div>👀 <h3>Observe</h3><p>Notice the little things.</p></div>
+        <div>💚 <h3>Feel good</h3><p>Celebrate getting outside.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>🌿 GreenQuest</strong>
+    <p>Explore · Observe · Feel Good</p>
+    <small>Built with HTML, CSS and JavaScript.</small>
+  </footer>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
